@@ -11,16 +11,9 @@ import ARKit
 
 final class FaceTrackingViewModel: NSObject, ObservableObject {
     
-    @Published var transcription: String = ""
+    @Published var transcription = String()
     
     @Published var eyesLook = EyesLook(up: 0, down: 0, left: 0, right: 0)
-    
-    @Published var audioSampleBuffer: CMSampleBuffer? {
-        didSet {
-            guard let buffer = audioSampleBuffer else { return }
-            speechRecognizer.append(audioSampleBuffer: buffer)
-        }
-    }
     
     override init() {
         super.init()
@@ -38,8 +31,9 @@ extension FaceTrackingViewModel: ARSessionDelegate {
         eyesLook = face.eyesLook
     }
     
-    func session(_ session: ARSession, didOutputAudioSampleBuffer audioSampleBuffer: CMSampleBuffer) {
-        self.audioSampleBuffer = audioSampleBuffer
+    func session(_ session: ARSession,
+                 didOutputAudioSampleBuffer audioSampleBuffer: CMSampleBuffer) {
+        speechRecognizer.append(audioSampleBuffer: audioSampleBuffer)
     }
     
 }
