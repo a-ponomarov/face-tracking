@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AccessingCue {
+enum AccessingCue: Equatable {
     
     case visual(Memory), auditory(Memory), kinesthetic, auditoryDigital
     

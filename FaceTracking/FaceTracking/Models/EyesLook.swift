@@ -14,6 +14,13 @@ struct EyesLook {
     let left: Float
     let right: Float
     
+    init(up: Float = 0, down: Float = 0, left: Float = 0, right: Float = 0) {
+        self.up = up
+        self.down = down
+        self.left = left
+        self.right = right
+    }
+    
     var direction: EyesDirection {
         if left > threshold {
             return up > threshold ? .upLeft : down > threshold ? .downLeft : .left

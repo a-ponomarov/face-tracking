@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B203B487293CFD0A002ACCDB /* FaceTrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B203B486293CFD0A002ACCDB /* FaceTrackingTests.swift */; };
 		B2B8C90B293892BD00503591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B8C90A293892BD00503591 /* AppDelegate.swift */; };
 		B2B8C911293892C500503591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2B8C910293892C500503591 /* Assets.xcassets */; };
 		B2B8C914293892C500503591 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2B8C913293892C500503591 /* Preview Assets.xcassets */; };
@@ -20,7 +21,19 @@
 		B2B8C92C293899C600503591 /* EyesLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B8C92B293899C600503591 /* EyesLook.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B203B488293CFD0A002ACCDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2B8C8FF293892BC00503591 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2B8C906293892BC00503591;
+			remoteInfo = FaceTracking;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B203B484293CFD0A002ACCDB /* FaceTrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceTrackingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B203B486293CFD0A002ACCDB /* FaceTrackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTrackingTests.swift; sourceTree = "<group>"; };
 		B2B8C907293892BC00503591 /* FaceTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B8C90A293892BD00503591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2B8C910293892C500503591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,6 +49,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B203B481293CFD0A002ACCDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2B8C904293892BC00503591 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -46,10 +66,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B203B485293CFD0A002ACCDB /* FaceTrackingTests */ = {
+			isa = PBXGroup;
+			children = (
+				B203B486293CFD0A002ACCDB /* FaceTrackingTests.swift */,
+			);
+			path = FaceTrackingTests;
+			sourceTree = "<group>";
+		};
 		B2B8C8FE293892BC00503591 = {
 			isa = PBXGroup;
 			children = (
 				B2B8C909293892BC00503591 /* FaceTracking */,
+				B203B485293CFD0A002ACCDB /* FaceTrackingTests */,
 				B2B8C908293892BC00503591 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B2B8C907293892BC00503591 /* FaceTracking.app */,
+				B203B484293CFD0A002ACCDB /* FaceTrackingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +153,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B203B483293CFD0A002ACCDB /* FaceTrackingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B203B48C293CFD0A002ACCDB /* Build configuration list for PBXNativeTarget "FaceTrackingTests" */;
+			buildPhases = (
+				B203B480293CFD0A002ACCDB /* Sources */,
+				B203B481293CFD0A002ACCDB /* Frameworks */,
+				B203B482293CFD0A002ACCDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B203B489293CFD0A002ACCDB /* PBXTargetDependency */,
+			);
+			name = FaceTrackingTests;
+			productName = FaceTrackingTests;
+			productReference = B203B484293CFD0A002ACCDB /* FaceTrackingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B2B8C906293892BC00503591 /* FaceTracking */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2B8C917293892C500503591 /* Build configuration list for PBXNativeTarget "FaceTracking" */;
@@ -150,6 +198,10 @@
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					B203B483293CFD0A002ACCDB = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = B2B8C906293892BC00503591;
+					};
 					B2B8C906293892BC00503591 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -169,11 +221,19 @@
 			projectRoot = "";
 			targets = (
 				B2B8C906293892BC00503591 /* FaceTracking */,
+				B203B483293CFD0A002ACCDB /* FaceTrackingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B203B482293CFD0A002ACCDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2B8C905293892BC00503591 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +246,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B203B480293CFD0A002ACCDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B203B487293CFD0A002ACCDB /* FaceTrackingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2B8C903293892BC00503591 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,7 +272,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B203B489293CFD0A002ACCDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2B8C906293892BC00503591 /* FaceTracking */;
+			targetProxy = B203B488293CFD0A002ACCDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B203B48A293CFD0A002ACCDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67CSC8R9LU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = andrii.ponomarov.FaceTrackingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceTracking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FaceTracking";
+			};
+			name = Debug;
+		};
+		B203B48B293CFD0A002ACCDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67CSC8R9LU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = andrii.ponomarov.FaceTrackingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceTracking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FaceTracking";
+			};
+			name = Release;
+		};
 		B2B8C915293892C500503591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -400,6 +514,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B203B48C293CFD0A002ACCDB /* Build configuration list for PBXNativeTarget "FaceTrackingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B203B48A293CFD0A002ACCDB /* Debug */,
+				B203B48B293CFD0A002ACCDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B2B8C902293892BC00503591 /* Build configuration list for PBXProject "FaceTracking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

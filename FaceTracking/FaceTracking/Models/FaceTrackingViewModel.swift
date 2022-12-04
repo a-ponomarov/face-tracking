@@ -13,7 +13,7 @@ final class FaceTrackingViewModel: NSObject, ObservableObject {
     
     @Published var transcription = String()
     
-    @Published var eyesLook = EyesLook(up: 0, down: 0, left: 0, right: 0)
+    @Published var eyesLook = EyesLook()
     
     override init() {
         super.init()
