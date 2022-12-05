@@ -6,20 +6,25 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct FaceTrackingView : View {
     
     @StateObject var viewModel = FaceTrackingViewModel()
-    
-    @State var isRecording = false
     
     var body: some View {
         VStack {
             Text(viewModel.eyesLook.string)
                 .font(.largeTitle)
                 .frame(height: eyesLookTextHeight)
-            ARViewContainer(delegate: viewModel)
             Text(viewModel.transcription)
+            ARViewContainer(delegate: viewModel)
+                .overlay(alignment: .bottomTrailing) {
+                    RecordButtonView(isRecording: $viewModel.isRecording) {
+                        viewModel.isRecording ? viewModel.finishWriting() : viewModel.startWriting()
+                    }
+            }
+            VideoPlayer(player: viewModel.player)
         }
     }
     

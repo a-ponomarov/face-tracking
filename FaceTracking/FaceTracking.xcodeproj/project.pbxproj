@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B203B487293CFD0A002ACCDB /* FaceTrackingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B203B486293CFD0A002ACCDB /* FaceTrackingTests.swift */; };
+		B203B491293D02C6002ACCDB /* MovieWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B203B490293D02C6002ACCDB /* MovieWriter.swift */; };
 		B2B8C90B293892BD00503591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B8C90A293892BD00503591 /* AppDelegate.swift */; };
 		B2B8C911293892C500503591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2B8C910293892C500503591 /* Assets.xcassets */; };
 		B2B8C914293892C500503591 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2B8C913293892C500503591 /* Preview Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		B2B8C9252938954900503591 /* EyesDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B8C9242938954900503591 /* EyesDirection.swift */; };
 		B2B8C9272938956900503591 /* AccessingCue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B8C9262938956900503591 /* AccessingCue.swift */; };
 		B2B8C92C293899C600503591 /* EyesLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B8C92B293899C600503591 /* EyesLook.swift */; };
+		B2C7BB98293DA64100988BDB /* RecordButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C7BB97293DA64100988BDB /* RecordButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* Begin PBXFileReference section */
 		B203B484293CFD0A002ACCDB /* FaceTrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceTrackingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B203B486293CFD0A002ACCDB /* FaceTrackingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTrackingTests.swift; sourceTree = "<group>"; };
+		B203B490293D02C6002ACCDB /* MovieWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieWriter.swift; sourceTree = "<group>"; };
 		B2B8C907293892BC00503591 /* FaceTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2B8C90A293892BD00503591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2B8C910293892C500503591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		B2B8C9242938954900503591 /* EyesDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyesDirection.swift; sourceTree = "<group>"; };
 		B2B8C9262938956900503591 /* AccessingCue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessingCue.swift; sourceTree = "<group>"; };
 		B2B8C92B293899C600503591 /* EyesLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyesLook.swift; sourceTree = "<group>"; };
+		B2C7BB97293DA64100988BDB /* RecordButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 			children = (
 				B2B8C91E293894BE00503591 /* ARViewContainer.swift */,
 				B2B8C91A2938946800503591 /* FaceTrackingView.swift */,
+				B2C7BB97293DA64100988BDB /* RecordButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 		B2B8C9292938998300503591 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B203B490293D02C6002ACCDB /* MovieWriter.swift */,
 				B2B8C920293894F400503591 /* SpeechRecognizer.swift */,
 			);
 			path = Services;
@@ -259,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2B8C921293894F400503591 /* SpeechRecognizer.swift in Sources */,
+				B2C7BB98293DA64100988BDB /* RecordButtonView.swift in Sources */,
+				B203B491293D02C6002ACCDB /* MovieWriter.swift in Sources */,
 				B2B8C91D2938949500503591 /* FaceTrackingViewModel.swift in Sources */,
 				B2B8C9272938956900503591 /* AccessingCue.swift in Sources */,
 				B2B8C9252938954900503591 /* EyesDirection.swift in Sources */,

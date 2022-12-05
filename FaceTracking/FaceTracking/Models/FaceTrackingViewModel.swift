@@ -11,9 +11,30 @@ import ARKit
 
 final class FaceTrackingViewModel: NSObject, ObservableObject {
     
-    @Published var transcription = String()
+    @Published var isRecording = false
+    @Published var player: AVPlayer?
+    
+    func startWriting() {
+        movieWriter.start()
+        isRecording = true
+        player = nil
+    }
+    
+    func finishWriting() {
+        Task {
+            let url = await movieWriter.finish()
+            await MainActor.run {
+                videoURL = url
+                player = AVPlayer(url: url)
+                isRecording = false
+            }
+        }
+    }
+    
+    @Published var videoURL: URL?
     
     @Published var eyesLook = EyesLook()
+    @Published var transcription = String()
     
     override init() {
         super.init()
@@ -21,6 +42,7 @@ final class FaceTrackingViewModel: NSObject, ObservableObject {
     }
     
     private let speechRecognizer = SpeechRecognizer()
+    private let movieWriter = MovieWriter()
 
 }
 
@@ -34,6 +56,15 @@ extension FaceTrackingViewModel: ARSessionDelegate {
     func session(_ session: ARSession,
                  didOutputAudioSampleBuffer audioSampleBuffer: CMSampleBuffer) {
         speechRecognizer.append(audioSampleBuffer: audioSampleBuffer)
+        if isRecording, let timestamp = session.currentFrame?.timestamp {
+            movieWriter.append(sampleBuffer: audioSampleBuffer, timestamp: timestamp)
+        }
+    }
+    
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        if isRecording, let currentFrame = session.currentFrame {
+            movieWriter.append(frame: currentFrame)
+        }
     }
     
 }
