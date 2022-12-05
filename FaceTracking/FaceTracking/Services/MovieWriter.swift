@@ -19,7 +19,7 @@ class MovieWriter {
                                                arrayToFill: nil,
                                                entriesNeededOut: &count)
         
-        var info: [CMSampleTimingInfo] =  Array(repeating: CMSampleTimingInfo(), count: count)
+        var info = Array(repeating: CMSampleTimingInfo(), count: count)
         CMSampleBufferGetSampleTimingInfoArray(sampleBuffer,
                                                entryCount: count,
                                                arrayToFill: &info,
